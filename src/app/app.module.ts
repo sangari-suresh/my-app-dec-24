@@ -11,6 +11,10 @@ import { MywebsiteComponent } from './mywebsite/mywebsite.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { RectangleComponent } from './rectangle/rectangle.component';
+import { DataBindingComponent } from './data-binding/data-binding.component';
+import { FormsModule } from '@angular/forms';
+import { CircleComponent } from './circle/circle.component';
+import { BmiComponent } from './bmi/bmi.component';
 
 @NgModule({
   declarations: [
@@ -22,11 +26,15 @@ import { RectangleComponent } from './rectangle/rectangle.component';
     MywebsiteComponent,
     WelcomeComponent,
     CalculatorComponent,
-    RectangleComponent
+    RectangleComponent,
+    DataBindingComponent,
+    CircleComponent,
+    BmiComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
