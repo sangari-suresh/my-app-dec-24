@@ -1,0 +1,19 @@
+<div class="parent">
+    <div class="right">
+
+        <h1>BMI </h1>
+        <label for="">height</label>
+        <input type="number" [(ngModel)]="height"><br>
+        <label for="">weight</label>
+        <input type="number" [(ngModel)]="weight"><br>
+        
+
+        <button (click)="submit()">submit</button>
+        <h2>Value is: {{result}}</h2>
+       <h2>Result is:{{bmi}}</h2>
+
+    </div>
+
+</div>
+
+

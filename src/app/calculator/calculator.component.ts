@@ -7,4 +7,28 @@ import { Component } from '@angular/core';
 })
 export class CalculatorComponent {
 
+  a:number=0;
+  b:number=0;
+  result:number=0;
+
+ ADD(){
+  this.result=this.a+this.b;
+  console.log(this.result);
+ }
+
+ SUB(){
+  this.result=this.a-this.b;
+  console.log(this.result);
+ }
+
+ MUL(){
+  this.result=this.a*this.b;
+  console.log(this.result);
+ }
+
+ DIV(){
+  this.result=this.a/this.b;
+  console.log(this.result);
+ }
+
 }
