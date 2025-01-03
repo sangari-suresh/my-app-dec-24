@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Directive, NgModule, ɵgetDirectives } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
@@ -10,6 +10,7 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
 import { RectangleComponent } from './rectangle/rectangle.component';
 import { CircleComponent } from './circle/circle.component';
 import { BmiComponent } from './bmi/bmi.component';
+import { DirectivesComponent } from './data-binding/directives/directives.component';
 
 
 const routes: Routes = [
@@ -22,7 +23,8 @@ const routes: Routes = [
     {path:'data-binding',component:DataBindingComponent},
     {path:'rectangle',component:RectangleComponent},
     {path:'circle',component:CircleComponent},
-    {path:'bmi',component:BmiComponent}
+    {path:'bmi',component:BmiComponent},
+    {path:'directives',component:DirectivesComponent}
   ]},
   {path:'**',component:ErrorComponent},
 ];

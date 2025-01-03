@@ -15,6 +15,7 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
 import { FormsModule } from '@angular/forms';
 import { CircleComponent } from './circle/circle.component';
 import { BmiComponent } from './bmi/bmi.component';
+import { DirectivesComponent } from './data-binding/directives/directives.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { BmiComponent } from './bmi/bmi.component';
     RectangleComponent,
     DataBindingComponent,
     CircleComponent,
-    BmiComponent
+    BmiComponent,
+    DirectivesComponent
   ],
   imports: [
     BrowserModule,
