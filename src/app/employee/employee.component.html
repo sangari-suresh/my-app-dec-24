@@ -1,0 +1,34 @@
+<h1>Employees</h1>
+
+<select [(ngModel)]="role" (change)="rolefilter()">
+    <option>UIDeveloper</option>
+    <option>Software Developer</option>
+    <option>Data Engineer</option>
+    <option>Testing Engineer</option>
+</select>
+
+<button class="btn btn-info" (click)="sort()">Packages High to Low</button>
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th>S NO</th>
+            <th>Name</th>
+            <th>Experience</th>
+            <th>Package</th>
+            <th>Role</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employees; let i=index">
+            <td>{{i+1}}</td>
+            <td>{{employee.name}}</td>
+            <td>{{employee.experience}}</td>
+            <td>{{employee.package}}</td>
+            <td>{{employee.role}}</td>
+            <td>
+                <button class="btn btn-danger" (click)="delete(i)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

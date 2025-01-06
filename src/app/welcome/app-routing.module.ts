@@ -10,8 +10,7 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
 import { RectangleComponent } from './rectangle/rectangle.component';
 import { CircleComponent } from './circle/circle.component';
 import { BmiComponent } from './bmi/bmi.component';
-import { DirectivesComponent } from './directives/directives.component';
-import { EmployeeComponent } from './employee/employee.component';
+import { DirectivesComponent } from './data-binding/directives/directives.component';
 
 
 const routes: Routes = [
@@ -25,8 +24,7 @@ const routes: Routes = [
     {path:'rectangle',component:RectangleComponent},
     {path:'circle',component:CircleComponent},
     {path:'bmi',component:BmiComponent},
-    {path:'directives',component:DirectivesComponent},
-    {path:'employee',component:EmployeeComponent}
+    {path:'directives',component:DirectivesComponent}
   ]},
   {path:'**',component:ErrorComponent},
 ];

@@ -15,8 +15,7 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
 import { FormsModule } from '@angular/forms';
 import { CircleComponent } from './circle/circle.component';
 import { BmiComponent } from './bmi/bmi.component';
-import { DirectivesComponent } from './directives/directives.component';
-import { EmployeeComponent } from './employee/employee.component';
+import { DirectivesComponent } from './data-binding/directives/directives.component';
 
 @NgModule({
   declarations: [
@@ -32,8 +31,7 @@ import { EmployeeComponent } from './employee/employee.component';
     DataBindingComponent,
     CircleComponent,
     BmiComponent,
-    DirectivesComponent,
-    EmployeeComponent
+    DirectivesComponent
   ],
   imports: [
     BrowserModule,
