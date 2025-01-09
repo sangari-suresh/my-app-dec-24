@@ -29,4 +29,17 @@ export class VehicleComponent {
       }
     )
   }
+
+  column:string="";
+  order:string="";
+  sort(){
+    this._vehicleService.getSortedVehicles(this.column,this.order).subscribe(
+      (data:any)=>{
+        this.vehicles=data;
+        console.log(this.vehicles);
+      },(err:any)=>{
+        alert("Internal Server Error");
+      }
+    )
+  }
 }

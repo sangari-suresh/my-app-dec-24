@@ -54,10 +54,13 @@
               "namedChunks": true
             }
           },
-          "defaultConfiguration": "production"
+          "defaultConfiguration": "development"
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "liveReload": true  
+          },
           "configurations": {
             "production": {
               "browserTarget": "my-app:build:production"
@@ -66,7 +69,7 @@
               "browserTarget": "my-app:build:development"
             }
           },
-          "defaultConfiguration": "development"
+          "defaultConfiguration": "development"  
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",

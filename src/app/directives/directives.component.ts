@@ -6,8 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./directives.component.css']
 })
 export class DirectivesComponent {
-
-
   age:number=30;
   // varaiblename:datatype==intialvale
 

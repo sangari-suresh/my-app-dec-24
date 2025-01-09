@@ -26,6 +26,7 @@ import { PinterestComponent } from './pinterest/pinterest.component';
 import { BlogComponent } from './blog/blog.component';
 import { WeatherComponent } from './weather/weather.component';
 import { MovieComponent } from './movie/movie.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { MovieComponent } from './movie/movie.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
