@@ -1,5 +1,9 @@
 <h1>Employees</h1>
 
+<button class="btn btn-info" (click)="hike()">Add 50k hike</button>
+
+<input type="text" placeholder="Enter Keyword to search" [(ngModel)]="text" (keyup)="search()">
+
 <select [(ngModel)]="role" (change)="rolefilter()">
     <option>UIDeveloper</option>
     <option>Software Developer</option>
@@ -8,6 +12,22 @@
 </select>
 
 <button class="btn btn-info" (click)="sort()">Packages High to Low</button>
+<button class="btn btn-warning" (click)="cost()">Cost to Company</button><br>
+
+<label for="">Name</label>
+<input type="text" [(ngModel)]="name"><br>
+
+<label for="">Experience</label>
+<input type="number" [(ngModel)]="experience"><br>
+
+<label for="">Package</label>
+<input type="text" [(ngModel)]="package"><br>
+
+<label for="">Role</label>
+<input type="text" [(ngModel)]="role"><br>
+<button class="btn btn-primary" (click)="add()">Add Employee</button>
+
+
 <table class="table table-dark">
     <thead>
         <tr>

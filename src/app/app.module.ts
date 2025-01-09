@@ -17,6 +17,15 @@ import { CircleComponent } from './circle/circle.component';
 import { BmiComponent } from './bmi/bmi.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { EmployeeComponent } from './employee/employee.component';
+import { FlipkartComponent } from './flipkart/flipkart.component';
+import { VehicleComponent } from './vehicle/vehicle.component';
+import { HttpClientModule } from "@angular/common/http";
+import { MyntraComponent } from './myntra/myntra.component';
+import { MailComponent } from './mail/mail.component';
+import { PinterestComponent } from './pinterest/pinterest.component';
+import { BlogComponent } from './blog/blog.component';
+import { WeatherComponent } from './weather/weather.component';
+import { MovieComponent } from './movie/movie.component';
 
 @NgModule({
   declarations: [
@@ -33,12 +42,21 @@ import { EmployeeComponent } from './employee/employee.component';
     CircleComponent,
     BmiComponent,
     DirectivesComponent,
-    EmployeeComponent
+    EmployeeComponent,
+    FlipkartComponent,
+    VehicleComponent,
+    MyntraComponent,
+    MailComponent,
+    PinterestComponent,
+    BlogComponent,
+    WeatherComponent,
+    MovieComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

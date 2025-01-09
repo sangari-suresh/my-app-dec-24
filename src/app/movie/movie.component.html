@@ -1,0 +1,9 @@
+<div class="parent">
+    <div class="child" *ngFor="let movie of movies">
+        <p>{{movie.movie}}</p>
+        <p>Rating: <span *ngFor="let star of[].constructor(getstar(movie.rating))">⭐</span></p>
+        <a  class="btn btn-primary" href="{{movie.imdb_url}}">View on IMDb</a>
+        
+    </div>
+-
+</div>

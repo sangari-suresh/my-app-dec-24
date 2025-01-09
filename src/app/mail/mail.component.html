@@ -1,0 +1,16 @@
+<h1>Mail</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>S No</th>
+            <th>Title</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let mail of mail">
+            <td>{{mail.id}}</td>
+            <td [ngClass]="{'color1':mail.completed==true, 'color2':mail.completed==false}">{{mail.title}}</td>
+        </tr>
+    </tbody>
+</table>

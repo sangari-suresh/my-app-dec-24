@@ -12,6 +12,14 @@ import { CircleComponent } from './circle/circle.component';
 import { BmiComponent } from './bmi/bmi.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { EmployeeComponent } from './employee/employee.component';
+import { FlipkartComponent } from './flipkart/flipkart.component';
+import { VehicleComponent } from './vehicle/vehicle.component';
+import { MyntraComponent } from './myntra/myntra.component';
+import { MailComponent } from './mail/mail.component';
+import { PinterestComponent } from './pinterest/pinterest.component';
+import { BlogComponent } from './blog/blog.component';
+import { MovieComponent } from './movie/movie.component';
+import { WeatherComponent } from './weather/weather.component';
 
 
 const routes: Routes = [
@@ -26,7 +34,15 @@ const routes: Routes = [
     {path:'circle',component:CircleComponent},
     {path:'bmi',component:BmiComponent},
     {path:'directives',component:DirectivesComponent},
-    {path:'employee',component:EmployeeComponent}
+    {path:'employee',component:EmployeeComponent},
+    {path:'flipkart',component:FlipkartComponent},
+    {path:'vehicle',component:VehicleComponent},
+    {path:'myntra',component:MyntraComponent},
+    {path:'mail',component:MailComponent},
+    {path:'pinterest',component:PinterestComponent},
+    {path:'blog',component:BlogComponent},
+    {path:'movie',component:MovieComponent},
+    {path:'weather',component:WeatherComponent}
   ]},
   {path:'**',component:ErrorComponent},
 ];

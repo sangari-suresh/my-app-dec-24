@@ -1,0 +1,27 @@
+.parent{background-color: black;
+    padding-left: 50px;
+    flex-direction: column;
+    gap: 20px;
+    padding: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    padding-right: 50px;
+
+}
+.child{
+    width: 90%;
+    height: 30%;
+    background-color: rgb(52, 50, 50);
+    color: gold;
+    padding-left: 20px;
+    justify-content: center;
+    /* gap: 20px; */
+    border-radius: 2px;
+    margin-left: 40px;
+}
+.btn{
+    background-color: rgb(52, 50, 50);
+    color: gold;
+    border: 1px solid gold;
+
+}

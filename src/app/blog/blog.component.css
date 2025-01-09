@@ -1,0 +1,15 @@
+.parent{
+    padding-left: 100px;
+    gap: 10px;
+}
+.child{
+    width: 90%;
+    height: 40%;
+    background-color: white;
+    justify-content: space-evenly;
+    padding-left: 60px;
+    padding-top: 10px;
+    
+    
+    
+}

@@ -29,9 +29,41 @@ export class EmployeeComponent {
    this.employees.sort((a:any,b:any)=>b.package-a.package)
   }
 
-  role:any="";
+  // role:any="";
 
   rolefilter(){
     this.employees= this.employees.filter((employee:any)=>employee.role==this.role);
+  }
+
+  text:string="";
+  search(){
+    this.employees= this.employees.filter((employee:any)=>employee.name.includes(this.text))
+  }
+
+  hike(){
+    this.employees= this.employees.map((employee:any)=>{
+      employee.package=employee.package+50000;
+      return employee
+    })
+  }
+
+  cost(){
+    let totalCost=this.employees.reduce((sum:any,employee:any)=>sum+employee.package,0)
+    alert(totalCost)
+  }
+
+  name:string="";
+  experience:number=0;
+  package:number=0;
+  role:string="";
+
+  add(){
+    let employee={
+      name:this.name,
+      experience:this.experience,
+      package:this.package,
+      role:this.role
+    };
+    this.employees.unshift(employee);
   }
 }
