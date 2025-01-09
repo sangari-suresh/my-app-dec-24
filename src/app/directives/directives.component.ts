@@ -12,15 +12,17 @@ export class DirectivesComponent {
   ages:number[]=[20,30,40,50,60];
 
   state:string="Telangana";
-  states:string[]=["telangana","andhrapradesh","karnataka","chennai","chennai"];
+  states:string[]=["telangana,andhrapradesh,karanataka,tamilnadu,kerala"];
 
   products:any[]=[
     {productName:'book',price:50},
-    {productName:'shirt',price:500},
+    {productName:'shirt',price:5000},
     {productName:'mobile',price:50000},
     {productName:'bike',price:500000},
     {productName:'car',price:5000000},
   ];
+  
+  today:any= new Date();
 
-  today:any = new Date();
+
 }

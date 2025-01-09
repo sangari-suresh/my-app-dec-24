@@ -6,17 +6,20 @@ body{
     width: 100vw;
     background-color:aqua;
     display: flex;
+    overflow: auto;
 }
 .left{
     width: 20%;
     height: 100%;
     background-color: rgb(176, 60, 60);
     color: antiquewhite;
+    overflow: auto;
+
 }
 .right{
     width: 80%;
     height: 100%;
-    background-color: blue;
+    background-color: grey;
     color: black;
     overflow: auto;
 }
