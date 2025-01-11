@@ -1,0 +1,43 @@
+<h1>Accounts</h1>
+
+<input type="text" [(ngModel)]="term" (keyup)="filter()">
+
+<select [(ngModel)]="term">
+    <option>account_name</option>
+    <option>account_number</option>
+    <option>available_balance</option>
+    <option>city</option>
+    <option>profie_picture</option>
+</select>
+
+<select  [(ngModel)]="order">
+    <option>asc</option>
+    <option>desc</option>
+</select>
+
+<button class="btn btn-primary" (click)="sort()">sort</button>
+
+<table class="table table-primary">
+    <thead>
+        <tr>
+            <th>Account Name</th>
+            <th>Account number</th>
+            <th>Avaible balance</th>
+            <th>city</th>
+            <th>Profile picture</th>
+            <th>Id</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let accounts of accounts">
+            <td>{{accounts.account_name}}</td>
+            <td>{{accounts.account_number}}</td>
+            <td>{{accounts.available_balance}}</td>
+            <td>{{accounts.city}}</td>
+            <td>
+                <a href="{{accounts.profie_picture}}"></a>
+            </td>
+            <td>{{accounts.id}}</td>
+        </tr>
+    </tbody>
+</table>

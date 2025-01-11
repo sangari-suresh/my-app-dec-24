@@ -1,0 +1,82 @@
+<div class="container">
+
+    <div class="operations">
+    <input type="text" [(ngModel)]="term" (keyup)="filter()">
+
+
+
+<select [(ngModel)]="column">
+    <option>name</option>
+    <option>id</option>
+    <option>phone</option>
+    <option>dob</option>
+    <option>email</option>
+    <option>school_name</option>
+    <option>school_city</option>
+    <option>school_pin</option>
+   
+</select>
+
+<select  [(ngModel)]="order">
+ <option>asc</option>
+ <option>desc</option>
+</select>
+
+<button class="btn btn-primary" (click)="sort()">sort</button>
+
+<select [(ngModel)]="limit">
+    <option>10</option>
+    <option>20</option>
+    <option>30</option>
+    <option>40</option>
+    <option>50</option>
+</select>
+
+
+<select [(ngModel)]="page">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+</select>
+
+<button (click)="pagination()">Pagination</button>
+
+<button class="btn btn-info" routerLink="/dashboard/create-studentcard">Create studentcard</button>
+
+</div>
+    <div class="card"  *ngFor="let studentcard of studentcard">
+     
+        
+        <div class="top" >
+            
+            <img  class="img1" src="{{studentcard.school_logo}}" alt=""><br>
+          
+            
+            <div class="topdetails">
+                <h6>{{studentcard.school_name}}</h6>
+                <p>{{studentcard.school_city}}</p>
+                <p>{{studentcard.school_pin}}</p>
+            </div>
+        </div>
+        <div class="side">
+        <div class="side1">
+             <h6>SESSION :2017-18</h6>
+            <p>NAME: {{studentcard.name}}</p>
+            <p>ID:{{studentcard.id}}</p>
+            <p>Ph.No:{{studentcard.phone}}</p>
+            <p>D.O.B{{studentcard.dob}}</p>
+            <p>E mail:{{studentcard.email}}</p>
+        </div>
+        <div class="side2">
+          <img  class="img2" src="{{studentcard.profile_picture}}" alt=""><br><br>
+          <p>PRINCIPAL</p>
+        </div>
+    </div>
+        <div class="bottom">
+            <button class="btn btn-dark">View</button>
+            <button class="btn btn-info">Edit</button>
+            <button class="btn btn-danger" (click)="delete(studentcard.id)">Delete</button>
+        </div>
+    </div>
+
+</div>
