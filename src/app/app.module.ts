@@ -12,7 +12,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { RectangleComponent } from './rectangle/rectangle.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CircleComponent } from './circle/circle.component';
 import { BmiComponent } from './bmi/bmi.component';
 import { DirectivesComponent } from './directives/directives.component';
@@ -27,6 +27,10 @@ import { BlogComponent } from './blog/blog.component';
 import { WeatherComponent } from './weather/weather.component';
 import { MovieComponent } from './movie/movie.component';
 import { CommonModule } from '@angular/common';
+import { AccountsComponent } from './accounts/accounts.component';
+import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
+import { StudentcardComponent } from './studentcard/studentcard.component';
+import { CreateStudentcardComponent } from './create-studentcard/create-studentcard.component';
 
 @NgModule({
   declarations: [
@@ -51,14 +55,18 @@ import { CommonModule } from '@angular/common';
     PinterestComponent,
     BlogComponent,
     WeatherComponent,
-    MovieComponent
+    MovieComponent,
+    AccountsComponent,
+    CreateVehicleComponent,
+    StudentcardComponent,
+    CreateStudentcardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    CommonModule
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

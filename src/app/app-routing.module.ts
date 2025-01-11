@@ -20,6 +20,10 @@ import { PinterestComponent } from './pinterest/pinterest.component';
 import { BlogComponent } from './blog/blog.component';
 import { MovieComponent } from './movie/movie.component';
 import { WeatherComponent } from './weather/weather.component';
+import { AccountsComponent } from './accounts/accounts.component';
+import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
+import { StudentcardComponent } from './studentcard/studentcard.component';
+import { CreateStudentcardComponent } from './create-studentcard/create-studentcard.component';
 
 
 const routes: Routes = [
@@ -42,7 +46,13 @@ const routes: Routes = [
     {path:'pinterest',component:PinterestComponent},
     {path:'blog',component:BlogComponent},
     {path:'movie',component:MovieComponent},
-    {path:'weather',component:WeatherComponent}
+    {path:'weather',component:WeatherComponent},
+    {path:'accounts',component:AccountsComponent},
+    {path:'create-vehicle',component:CreateVehicleComponent},
+    {path:'studentcard',component:StudentcardComponent},
+    {path:'create-studentcard',component:CreateStudentcardComponent}
+    
+
   ]},
   {path:'**',component:ErrorComponent},
 ];
