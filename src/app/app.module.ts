@@ -31,6 +31,8 @@ import { AccountsComponent } from './accounts/accounts.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { StudentcardComponent } from './studentcard/studentcard.component';
 import { CreateStudentcardComponent } from './create-studentcard/create-studentcard.component';
+import { CreateAccountsComponent } from './create-accounts/create-accounts.component';
+import { ProfilesComponent } from './profiles/profiles.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +61,9 @@ import { CreateStudentcardComponent } from './create-studentcard/create-studentc
     AccountsComponent,
     CreateVehicleComponent,
     StudentcardComponent,
-    CreateStudentcardComponent
+    CreateStudentcardComponent,
+    CreateAccountsComponent,
+    ProfilesComponent
   ],
   imports: [
     BrowserModule,
