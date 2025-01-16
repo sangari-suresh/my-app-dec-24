@@ -24,6 +24,8 @@ import { AccountsComponent } from './accounts/accounts.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { StudentcardComponent } from './studentcard/studentcard.component';
 import { CreateStudentcardComponent } from './create-studentcard/create-studentcard.component';
+import { CreateAccountsComponent } from './create-accounts/create-accounts.component';
+import { ProfilesComponent } from './profiles/profiles.component';
 
 
 const routes: Routes = [
@@ -50,7 +52,10 @@ const routes: Routes = [
     {path:'accounts',component:AccountsComponent},
     {path:'create-vehicle',component:CreateVehicleComponent},
     {path:'studentcard',component:StudentcardComponent},
-    {path:'create-studentcard',component:CreateStudentcardComponent}
+    {path:'create-studentcard',component:CreateStudentcardComponent},
+    {path:'create-accounts',component:CreateAccountsComponent},
+    {path:'profiles',component:ProfilesComponent}
+    
     
 
   ]},

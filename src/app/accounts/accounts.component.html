@@ -2,7 +2,7 @@
 
 <input type="text" [(ngModel)]="term" (keyup)="filter()">
 
-<select [(ngModel)]="term">
+<select [(ngModel)]="column">
     <option>account_name</option>
     <option>account_number</option>
     <option>available_balance</option>
@@ -17,6 +17,26 @@
 
 <button class="btn btn-primary" (click)="sort()">sort</button>
 
+<select [(ngModel)]="limit">
+    <option>10</option>
+    <option>20</option>
+    <option>30</option>
+    <option>40</option>
+</select>
+
+<select [(ngModel)]="page">
+    <option>1</option>
+    <option>2</option>
+
+</select>
+<button (click)="pagination()">Pagination</button>
+
+
+<button class="btn btn-info" routerLink="/dashboard/create-accounts">Create accounts</button>
+
+
+
+
 <table class="table table-primary">
     <thead>
         <tr>
@@ -26,6 +46,7 @@
             <th>city</th>
             <th>Profile picture</th>
             <th>Id</th>
+            <th>Action</th>
         </tr>
     </thead>
     <tbody>
@@ -38,6 +59,9 @@
                 <a href="{{accounts.profie_picture}}"></a>
             </td>
             <td>{{accounts.id}}</td>
+            <td>
+                <button class="btn btn-danger" (click)="delete(accounts.id)">Delete</button>
+            </td>
         </tr>
     </tbody>
 </table>

@@ -6,26 +6,33 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class AccountsService {
-  constructor(private _httpClient: HttpClient) {}
+ 
 
-  getAccounts(): Observable<any> {
-    return this._httpClient.get(
-      'https://6128991386a213001729f9df.mockapi.io/test/v1/principals'
-    );
+  constructor(private _httpClient:HttpClient) { }
+
+  getAccounts():Observable<any>{
+    return this._httpClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/principals");
+    
   }
 
-  getFilteredAccounts(term: string): Observable<any> {
-    return this._httpClient.get(
-      'https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction?filter=' +
-        term
-    );
+  getFilteredAccounts(term:string):Observable<any>{
+    return this._httpClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/principals?filter="+term);
+  
   }
-  getSortedAccounts(column: string, order: string): Observable<any>  {
-    return this._httpClient.get(
-      'https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction?sortBy=' +
-        column +
-        '&order=' +
-        order
-    );
+
+  getSortedAccounts(column:string,order:string):Observable<any>{
+    return this._httpClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/principals?sortBy="+column+"&order="+order);
+  }
+
+  getPaginatedAccounts(limit:number,page:number):Observable<any>{
+    return this._httpClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/principals?limit="+limit+"&page="+page);
+  }
+
+  deleteAccounts(id:number){
+    return this._httpClient.delete("https://6128991386a213001729f9df.mockapi.io/test/v1/principals/"+id);
+  }
+  
+  createAccounts(data:any){
+    return this._httpClient.post("https://6128991386a213001729f9df.mockapi.io/test/v1/principals",data);
   }
 }
