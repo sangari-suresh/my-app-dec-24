@@ -14,6 +14,7 @@ body{
     background-color: rgb(176, 60, 60);
     color: antiquewhite;
     overflow: auto;
+    padding-left: 60px;
 
 }
 .right{
