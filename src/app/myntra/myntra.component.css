@@ -4,7 +4,6 @@
     flex-wrap: wrap;
     gap: 10px;
     border-color: green;
-    
     justify-content: space-evenly;
 }
 .card{

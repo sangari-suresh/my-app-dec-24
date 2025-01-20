@@ -23,7 +23,6 @@ export class VehicleComponent {
     }
     
   term:string="";
-
   filter(){
     this._vehicleService.getFilteredVehicles(this.term).subscribe(
       (data:any)=>{

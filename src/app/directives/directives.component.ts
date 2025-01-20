@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class DirectivesComponent {
   age:number=30;
-  // varaiblename:datatype==intialvale
+  // varaiblename:datatype==intialvalue
 
   ages:number[]=[20,30,40,50,60];
 

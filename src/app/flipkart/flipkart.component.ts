@@ -43,7 +43,7 @@ filter(){
   
   discount(){
     this.flipkart=this.flipkart.map((flipkart:any)=>{
-      flipkart.Price=flipkart.Price-(flipkart.Price/2);
+      flipkart.Price=(flipkart.Price/2);
       return flipkart;
     })
   }
