@@ -33,7 +33,6 @@ export class CreateStudentcardComponent {
     (data:any)=>{
       console.log(data);
       alert("Studentcard created successfully");
-    
       this._router.navigateByUrl("/dashboard/studentcard");
    },(error:any)=>{
     alert("internal server error");

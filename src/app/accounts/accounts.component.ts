@@ -9,7 +9,6 @@ import { AccountsService } from '../accounts.service';
 export class AccountsComponent {
 
   accounts:any = [];
-  _accountsservice: any;
   constructor( private _accountsService:AccountsService) {
     this.pageload();
   }
