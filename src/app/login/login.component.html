@@ -37,7 +37,7 @@
 </div>
 </div>
      -->
-
+<!-- 
      <div class="Linked">
           <h1>Linked<mark class="in">in</mark></h1>
      </div>
@@ -61,6 +61,13 @@
             <h6>New to Linkedin? <a href="">Join now</a></h6>
         </div>      
     </div>
-      
+       -->
     
       
+       <form action="" [formGroup]="loginForm">
+        <label for="">Email</label>
+        <input type="text" formControlName="email"><br>
+        <label for="">Password</label>
+        <input type="password" formControlName="password"><br>
+        <button (click)="login()">Login</button>
+       </form>
