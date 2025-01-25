@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { AccountsService } from '../accounts.service';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
@@ -9,8 +9,25 @@ import { FormControl, FormGroup } from '@angular/forms';
   styleUrls: ['./create-accounts.component.css']
 })
 export class CreateAccountsComponent {
+  id:number=0;
 
-  constructor(private _accountsService:AccountsService, private _router:Router) { }
+  constructor( private _activatedRoute:ActivatedRoute,private _accountsService:AccountsService, private _router:Router) { 
+    _activatedRoute.params.subscribe(
+      (data:any)=>{
+        console.log(data.id);
+        this.id=data.id;
+
+        _accountsService.getAccount(data.id).subscribe(
+          (data:any)=>{
+            console.log(data);
+            this.accountsForm.patchValue(data);
+          }
+        )
+      }
+    )
+  }
+  
+
 
   public accountsForm:FormGroup=new FormGroup(
     {
@@ -22,17 +39,29 @@ export class CreateAccountsComponent {
     }
   )
 
+  submit(){
+    if (this.id){
+    this._accountsService.updateAccounts(this.id,this.accountsForm.value).subscribe(
+      (data:any)=>{
+        alert("Updated  successfully");
+        this._router.navigateByUrl("/dashboard/accounts");
+      },(error:any)=>{
+        alert("Internal server error");
+      }
+    );
 
-  create(){
-    console.log(this.accountsForm.value);
+  }else{
     this._accountsService.createAccounts(this.accountsForm.value).subscribe(
       (data:any)=>{
         console.log(data);
-        alert("vehicle created successfully");
+        alert("Accounts created successfully");
         this._router.navigateByUrl("/dashboard/accounts");
       },(error:any)=>{
         alert("Internal server error");
       }
     )
   }
+  }
 }
+
+

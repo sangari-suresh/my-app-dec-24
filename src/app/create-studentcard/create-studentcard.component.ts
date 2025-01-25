@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { StudentcardService } from '../studentcard.service';
 
 @Component({
@@ -9,8 +9,22 @@ import { StudentcardService } from '../studentcard.service';
   styleUrls: ['./create-studentcard.component.css']
 })
 export class CreateStudentcardComponent {
+  id:number=0;
   
-  constructor(private _studentcardService:StudentcardService, private _router:Router) { }
+  constructor( private _activatedRoute:ActivatedRoute,private _studentcardService:StudentcardService, private _router:Router) { 
+    _activatedRoute.params.subscribe(
+      (data:any)=>{
+        console.log(data.id);
+        this.id=data.id;
+        _studentcardService.getstudentcard(data.id).subscribe(
+          (data:any)=>{
+            console.log(data);
+            this.studentcardForm.patchValue(data);
+          }
+        )
+      }
+    )
+  }
   
   public studentcardForm:FormGroup=new FormGroup(
     {
@@ -27,16 +41,28 @@ export class CreateStudentcardComponent {
     }
   )
     
-  create(){
-    console.log(this.studentcardForm.value);
-    this._studentcardService.createstudentcard(this.studentcardForm.value).subscribe(
-    (data:any)=>{
-      console.log(data);
-      alert("Studentcard created successfully");
-      this._router.navigateByUrl("/dashboard/studentcard");
-   },(error:any)=>{
-    alert("internal server error");
-   }
+  submit(){
+    if (this.id){
+      this._studentcardService.updateStudentcard(this.id,this.studentcardForm.value).subscribe(
+        (data:any)=>{
+          alert("Updated Successfully!");
+          this._router.navigateByUrl('/dashboard/studentcard');
+        },(err:any)=>{
+          alert('Internal Server Error')
+        }
+      );
+    }else{
+      this._studentcardService.createstudentcard(this.studentcardForm.value).subscribe(
+        (data:any)=>{
+          console.log(data);
+          alert("Studentcard created successfully");
+          this._router.navigateByUrl("/dashboard/studentcard");
+       },(error:any)=>{
+        alert("internal server error");
+
+    }
+   
   )
+}
   }
 }

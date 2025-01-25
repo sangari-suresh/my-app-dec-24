@@ -6,6 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class AccountsService {
+  
  
 
   constructor(private _httpClient:HttpClient) { }
@@ -34,5 +35,12 @@ export class AccountsService {
   
   createAccounts(data:any){
     return this._httpClient.post("https://6128991386a213001729f9df.mockapi.io/test/v1/principals",data);
+  }
+
+  getAccount(id:number):Observable<any>{
+    return this._httpClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/principals/"+id)
+  }
+  updateAccounts(id:number,data:any){
+    return this._httpClient.put("https://6128991386a213001729f9df.mockapi.io/test/v1/principals/"+id,data);
   }
 }

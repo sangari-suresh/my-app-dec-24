@@ -10,17 +10,15 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class CreateVehicleComponent {
   id: number = 0;
-  constructor(
-    private _activatedRoute: ActivatedRoute,
-    private _vehicleService: VehicleService,
-    private _router: Router
-  ) {
+  constructor(private _activatedRoute: ActivatedRoute,private _vehicleService: VehicleService, private _router: Router) {
     // capturing id with activated route
-    _activatedRoute.params.subscribe((data: any) => {
+    _activatedRoute.params.subscribe(
+      (data: any) => {
       console.log(data.id);
       this.id = data.id;
       // integrating API
-      _vehicleService.getVehicle(data.id).subscribe((data: any) => {
+      _vehicleService.getVehicle(data.id).subscribe(
+        (data: any) => {
         console.log(data);
         // display the data inform
         this.vehicleForm.patchValue(data);
@@ -42,14 +40,11 @@ export class CreateVehicleComponent {
   submit() {
     // update vehicle
     if (this.id) {
-      this._vehicleService
-        .updateVehicle(this.id, this.vehicleForm.value)
-        .subscribe(
+      this._vehicleService.updateVehicle(this.id, this.vehicleForm.value) .subscribe(
           (data: any) => {
             alert('Updated Successfully!');
             this._router.navigateByUrl('/dashboard/vehicle');
-          },
-          (err: any) => {
+          },(err: any) => {
             alert('Internal Server Error');
           }
         );
@@ -61,8 +56,7 @@ export class CreateVehicleComponent {
           console.log(data);
           alert('Vehicle created successfully');
           this._router.navigateByUrl('/dashboard/vehicle');
-        },
-        (error: any) => {
+        },(error: any) => {
           alert('internal server error');
         }
       );

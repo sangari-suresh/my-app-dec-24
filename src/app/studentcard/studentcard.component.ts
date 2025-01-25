@@ -13,7 +13,7 @@ export class StudentcardComponent {
       this.pageload();
   }
   pageload(){
-    this._studentcardservice.getstudentcard().subscribe(
+    this._studentcardservice.getstudentcards().subscribe(
       (data:any)=>{
         this.studentcard=data;
         console.log(this.studentcard);
