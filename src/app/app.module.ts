@@ -36,6 +36,10 @@ import { ProfilesComponent } from './profiles/profiles.component';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { CreateStudentComponent } from './create-student/create-student.component';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+import { CreateAccountsdetailsComponent } from './create-accountsdetails/create-accountsdetails.component';
+import { HooksComponent } from './hooks/hooks.component';
+
+
 
 @NgModule({
   declarations: [
@@ -69,7 +73,11 @@ import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.compo
     ProfilesComponent,
     CreateUserComponent,
     CreateStudentComponent,
-    VehicleDetailsComponent
+    VehicleDetailsComponent,
+    CreateAccountsdetailsComponent,
+    HooksComponent,
+    
+    
   ],
   imports: [
     BrowserModule,

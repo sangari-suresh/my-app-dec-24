@@ -13,7 +13,6 @@ constructor( private _activatedRoute:ActivatedRoute,private _vehicleService:Vehi
   _activatedRoute.params.subscribe(
     (data:any)=>{
       console.log(data.id);
-
       _vehicleService.getVehicle(data.id).subscribe(
         (data:any)=>{
           this.vehicle=data;

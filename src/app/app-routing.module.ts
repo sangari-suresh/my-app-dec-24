@@ -30,6 +30,8 @@ import { CreateUserComponent } from './create-user/create-user.component';
 import { CreateStudentComponent } from './create-student/create-student.component';
 import { AuthenticationGuard } from './authentication.guard';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+import { StudentcarddetailsComponent } from './studentcarddetails/studentcarddetails.component';
+import { CreateAccountsdetailsComponent } from './create-accountsdetails/create-accountsdetails.component';
 
 
 const routes: Routes = [
@@ -62,10 +64,12 @@ const routes: Routes = [
     {path:'create-user',canActivate:[AuthenticationGuard],component:CreateUserComponent},
     {path:'create-student',canActivate:[AuthenticationGuard],component:CreateStudentComponent},
     {path:'vehicle-details/:id',canActivate:[AuthenticationGuard],component:VehicleDetailsComponent},
-    {path:'edit-vehicle/:id',component:CreateVehicleComponent,canActivate:[AuthenticationGuard]}
-    
-    
-
+    {path:'edit-vehicle/:id',canActivate:[AuthenticationGuard],component:CreateVehicleComponent,},
+    {path:'studentcard-details/:id',canActivate:[AuthenticationGuard],component:StudentcarddetailsComponent},
+    {path:'edit-studentcard/:id',canActivate:[AuthenticationGuard],component:CreateStudentcardComponent},
+    {path:'accounts-details/:id',canActivate:[AuthenticationGuard],component:CreateAccountsdetailsComponent},
+    {path:'edit-accounts/:id',canActivate:[AuthenticationGuard],component:CreateAccountsComponent}
+  
   ]},
   {path:'**',component:ErrorComponent},
 ];

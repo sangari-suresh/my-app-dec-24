@@ -73,8 +73,8 @@
         </div>
     </div>
         <div class="bottom">
-            <button class="btn btn-dark">View</button>
-            <button class="btn btn-info">Edit</button>
+            <button class="btn btn-dark" routerLink="/dashboard/studentcard-details/{{studentcard.id}}">View</button>
+            <button class="btn btn-info" routerLink="/dashboard/edit-studentcard/{{studentcard.id}}">Edit</button>
             <button class="btn btn-danger" (click)="delete(studentcard.id)">Delete</button>
         </div>
     </div>
