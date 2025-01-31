@@ -1,5 +1,5 @@
 import { Directive, NgModule, ɵgetDirectives } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import {LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -32,6 +32,12 @@ import { AuthenticationGuard } from './authentication.guard';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 import { StudentcarddetailsComponent } from './studentcarddetails/studentcarddetails.component';
 import { CreateAccountsdetailsComponent } from './create-accountsdetails/create-accountsdetails.component';
+import { Sibling1Component } from './sibling1/sibling1.component';
+import { Sibling2Component } from './sibling2/sibling2.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { RatingComponent } from './rating/rating.component';
+import { TextareaComponent } from './textarea/textarea.component';
 
 
 const routes: Routes = [
@@ -68,14 +74,22 @@ const routes: Routes = [
     {path:'studentcard-details/:id',canActivate:[AuthenticationGuard],component:StudentcarddetailsComponent},
     {path:'edit-studentcard/:id',canActivate:[AuthenticationGuard],component:CreateStudentcardComponent},
     {path:'accounts-details/:id',canActivate:[AuthenticationGuard],component:CreateAccountsdetailsComponent},
-    {path:'edit-accounts/:id',canActivate:[AuthenticationGuard],component:CreateAccountsComponent}
+    {path:'edit-accounts/:id',canActivate:[AuthenticationGuard],component:CreateAccountsComponent},
+    {path:'sibling1',canActivate:[AuthenticationGuard],component:Sibling1Component},
+    {path:'sibling2',canActivate:[AuthenticationGuard],component:Sibling2Component},
+    {path:'parent',canActivate:[AuthenticationGuard],component:ParentComponent},
+    {path:'child',canActivate:[AuthenticationGuard],component:ChildComponent},
+    {path:'rating',canActivate:[AuthenticationGuard],component:RatingComponent},
+    { path: 'payment', loadChildren: () => import('./payment/payment.module'). then(m => m.PaymentModule)},
+    {path:'textarea',canActivate:[AuthenticationGuard],component:TextareaComponent},
+    
   
   ]},
   {path:'**',component:ErrorComponent},
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{preloadingStrategy:PreloadAllModules})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

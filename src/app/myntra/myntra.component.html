@@ -4,8 +4,8 @@
     <div class="card" *ngFor="let myntra of myntra">
       <img src="{{myntra.image}}" alt="">
       <div class="rating">
-      <p>&star;{{myntra.rating.rate}}</p>
-
+      <!-- <p>&star;{{myntra.rating.rate}}</p> -->
+        <p><app-rating [rating]="myntra.rating.rate"></app-rating></p>
        </div>
        <div class="details">
          <p>{{myntra.category}}</p>
