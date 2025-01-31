@@ -61,7 +61,9 @@
             <td>{{i+1}}</td>
             <td>{{flipkart.ProductName}}</td>
             <td>{{flipkart.Price}}</td>
-            <td>{{flipkart.Rating}}</td>
+            <td>{{flipkart.Rating}}
+              <app-rating [rating]="flipkart.Rating"></app-rating>
+            </td>
             <td>{{flipkart.FreeDelivery}}</td>
             <td>
                 <button class="btn btn-danger" (click)="delete(i)">Delete</button>
