@@ -8,7 +8,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class ChildComponent {
   moon:string='';
   @Input() a:number=0;
-  @Output() bEvent:EventEmitter<number>=new EventEmitter()
+  @Output() bEvent:EventEmitter<number>=new EventEmitter();
 
 
   @Input() star:string='';
