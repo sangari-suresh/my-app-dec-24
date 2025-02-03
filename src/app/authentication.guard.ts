@@ -14,8 +14,8 @@ export class AuthenticationGuard implements CanActivate {
     if(sessionStorage.getItem('token')){
       return true
     }else{
-      alert("You need to login to access this page")
-      this._router.navigateByUrl("/login")
+      alert("You need to login to access this page");
+      this._router.navigateByUrl("/login");
       return false;
     }
      
