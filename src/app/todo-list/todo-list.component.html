@@ -1,0 +1,18 @@
+
+ <div class="top">
+<h1>To do-List</h1>
+
+<div class="input">
+<input type="text" [(ngModel)]="Text" placeholder="Add new task"/>
+<button type="button" (click)="add()" class="btn btn-success">Add</button>
+</div>
+
+<ul>
+    <li *ngFor="let todo of todos,let i=index">
+        <input type="checkbox" >
+        <h5>{{todo.text}}</h5>
+        <button type="button" (click)="remove(i)" class="btn btn-danger">Remove</button>
+
+    </li>
+</ul>
+</div>
