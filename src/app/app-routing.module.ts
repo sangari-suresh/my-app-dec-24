@@ -38,6 +38,7 @@ import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { RatingComponent } from './rating/rating.component';
 import { TextareaComponent } from './textarea/textarea.component';
+import { TodoListComponent } from './todo-list/todo-list.component';
 
 
 const routes: Routes = [
@@ -82,6 +83,7 @@ const routes: Routes = [
     {path:'rating',canActivate:[AuthenticationGuard],component:RatingComponent},
     { path: 'payment', loadChildren: () => import('./payment/payment.module'). then(m => m.PaymentModule)},
     {path:'textarea',canActivate:[AuthenticationGuard],component:TextareaComponent},
+    {path:'todo-list',canActivate:[AuthenticationGuard],component:TodoListComponent}
     
   
   ]},

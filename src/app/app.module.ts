@@ -48,6 +48,7 @@ import { BalancePipe } from './balance.pipe';
 import { TokenInterceptor } from './token.interceptor';
 import { AboutUsModule } from './about-us/about-us.module';
 import { TextareaComponent } from './textarea/textarea.component';
+import { TodoListComponent } from './todo-list/todo-list.component';
 
 
 
@@ -94,6 +95,7 @@ import { TextareaComponent } from './textarea/textarea.component';
     CapitalDirective,
     BalancePipe,
     TextareaComponent,
+    TodoListComponent,
     
     
   ],
