@@ -49,6 +49,7 @@ import { TokenInterceptor } from './token.interceptor';
 import { AboutUsModule } from './about-us/about-us.module';
 import { TextareaComponent } from './textarea/textarea.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
+import { OperatorsComponent } from './operators/operators.component';
 
 
 
@@ -96,6 +97,7 @@ import { TodoListComponent } from './todo-list/todo-list.component';
     BalancePipe,
     TextareaComponent,
     TodoListComponent,
+    OperatorsComponent,
     
     
   ],
